@@ -1,0 +1,52 @@
+
+
+@import "reset.css";
+@import "design-system.css";
+main {
+	width: 532px;
+	display: grid;
+	grid-template-rows: 100px 1fr 50px;
+	grid-template-areas: "hd" "sc" "ft";
+	border: 2px solid #ececec;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+header {
+	text-align: center;
+	grid-area: hd;
+}
+
+section {
+	grid-area: sc;
+}
+
+footer {
+	grid-area: ft;
+}
+
+::placeholder {
+	font-size: 16px;
+}
+
+textarea,
+input,
+select {
+	width: 512px;
+	border: 1px solid #ececec;
+	padding: 10px;
+}
+
+.entry {
+	display: none;
+}
+
+.entryHolder {
+	background: #ececec;
+	padding: 10px;
+}
+
+span {
+	text-decoration: underline;
+}
+
