@@ -1,8 +1,6 @@
 # Weather Journal ![alt text][logo]
 [logo]: https://alexpwls.github.io/personal-blog-website/images/favicon/favicon-16x16.png "Purple dot"
 
----
-
 ## Description:
 
 Project Three from the Udacity Front-end developer nanodegree. Develop a Weather Journal.
