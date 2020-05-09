@@ -24,4 +24,4 @@ Run the command: node server.js
 
 The application should now be visible if you go to [http://localhost:3000/](http://localhost:3000/ "http://localhost:3000/")
 
-The demo link is installed using a Digital Ocean Droplet, more information about that [https://marketplace.digitalocean.com/apps/nodejs/](https://marketplace.digitalocean.com/apps/nodejs/ "here").
+The demo link is installed using a Digital Ocean Droplet, more information about that [https://marketplace.digitalocean.com/apps/nodejs/](here "https://marketplace.digitalocean.com/apps/nodejs/").
