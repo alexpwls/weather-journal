@@ -60,6 +60,7 @@ input, select {
 }
 
 button {
+	width: 330px;
 	background-color: #6633EE;
 	color: #fff;
 	border: none;

@@ -5,6 +5,7 @@ const apiKey = '&appid=57d8704d83b47e11e5115af0dc5cff52';
 /* Global Variables */
 let tempUnit = '&units=imperial';
 let tempUnitText = ' °F';
+const errorText = document.getElementById('error-text');
 
 // Event listener to add function to existing HTML DOM element
 document.getElementById('generate').addEventListener('click', buttonClicked);
@@ -21,14 +22,33 @@ function buttonClicked() {
         tempUnit = '&units=imperial';
         tempUnitText = ' °F';
     }
-    let urlConstruct = apiUrl + zipCode + countryCode + apiKey + tempUnit;
-    getWeather(urlConstruct)
-    .then(function(data){
-        let date = new Date(data.dt * 1000)
-        let date_str = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
-        postData('/addJournalData', {date: date_str, temp: data.main.temp + tempUnitText, content: feelings})
-        updateView('/all');
-    })
+    if (zipCode && feelings) {
+        let urlConstruct = apiUrl + zipCode + countryCode + apiKey + tempUnit;
+        getWeather(urlConstruct)
+        .then(function(data){
+            if (data.cod == 200) {
+                let date = new Date(data.dt * 1000)
+                let date_str = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
+                postData('/addJournalData', {date: date_str, temp: data.main.temp + tempUnitText, content: feelings})
+                updateView('/all');
+            } else {
+                errorText.textContent = "Something went wrong when calling the API, please check your data or try again later.";
+                errorText.style.display = "block";
+            }
+
+        }, reason => {
+            console.error(reason);
+        })
+    } else if (zipCode) {
+        errorText.textContent = "Please explain how you feel that moment.";
+        errorText.style.display = "block";
+    } else if (feelings) {
+        errorText.textContent = "You forgot to enter a zip/postal code.";
+        errorText.style.display = "block";
+    } else {
+        errorText.style.display = "block";
+    }
+
 }
 
 /* Function to GET Web API Data*/
@@ -40,6 +60,7 @@ const getWeather = async ( url = '') =>{
         // Transform into JSON
         let data = await res.json()
         return data;
+        
     }
     catch(error) {
         console.log("error", error);

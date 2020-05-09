@@ -1,9 +1,8 @@
-
-
 @import "reset.css";
 @import "design-system.css";
+
 main {
-	width: 532px;
+	width: 330px;
 	display: grid;
 	grid-template-rows: 100px 1fr 50px;
 	grid-template-areas: "hd" "sc" "ft";
@@ -33,9 +32,13 @@ footer {
 textarea,
 input,
 select {
-	width: 512px;
+	width: 310px;
 	border: 1px solid #ececec;
 	padding: 10px;
+}
+
+select {
+	width: 330px;
 }
 
 .entry {
@@ -51,3 +54,9 @@ span {
 	text-decoration: underline;
 }
 
+.error-text {
+	display: none;
+	color: red;
+	border: 1px solid red;
+	padding: 10px;
+}
