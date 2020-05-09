@@ -4,6 +4,8 @@
   "description": "[logo]: https://alexpwls.github.io/personal-blog-website/images/favicon/favicon-16x16.png \"Purple dot\"",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {},
