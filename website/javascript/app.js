@@ -17,6 +17,9 @@ function buttonClicked() {
     if (countryCode == ',be') {
         tempUnit = '&units=metric';
         tempUnitText = ' °C';
+    } else {
+        tempUnit = '&units=imperial';
+        tempUnitText = ' °F';
     }
     let urlConstruct = apiUrl + zipCode + countryCode + apiKey + tempUnit;
     getWeather(urlConstruct)

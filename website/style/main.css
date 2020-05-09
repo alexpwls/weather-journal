@@ -27,6 +27,7 @@ footer {
 
 ::placeholder {
 	font-size: 16px;
+	color: #666;
 }
 
 textarea,
