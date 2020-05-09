@@ -1,0 +1,29 @@
+{
+  "name": "weather-journal",
+  "version": "1.0.0",
+  "description": "[logo]: https://alexpwls.github.io/personal-blog-website/images/favicon/favicon-16x16.png \"Purple dot\"",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexpwls/weather-journal.git"
+  },
+  "author": "Alex Pauwels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexpwls/weather-journal/issues"
+  },
+  "homepage": "https://github.com/alexpwls/weather-journal#readme",
+  "keywords": [
+    "Weather",
+    "Journal",
+    "app"
+  ]
+}
