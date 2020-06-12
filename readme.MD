@@ -1,7 +1,7 @@
 # Weather Journal ![alt text][logo]
 [logo]: https://alexpwls.github.io/personal-blog-website/images/favicon/favicon-16x16.png "Purple dot"
 
-Demo link: [http://188.166.38.120:3000/](http://188.166.38.120:3000/ "Weather journal demo link")
+Demo link: [http://labs.launch-it.eu:8083](http://labs.launch-it.eu:8083 "Weather journal demo link")
 ---
 
 ## Description:
